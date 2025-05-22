@@ -1,8 +1,6 @@
 class PostsController < ApplicationController
-  # validates :title, presence: true
-  # validates :category, inclusion: ["Fiction", "Non-Fiction"]
-  # validates :content, length: {minimum: 100}
-rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
+ 
+  rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
   def show
     post = Post.find(params[:id])
